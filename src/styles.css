@@ -1,0 +1,71 @@
+:root {
+	--FontNunito: "Nunito Sans", sans-serif;
+	--Dark-Blue: hsl(209, 23%, 22%);
+	--Bg-Dark: hsl(207, 26%, 17%);
+	--White: hsl(0, 0%, 100%);
+	--Light-text: hsl(200, 15%, 8%);
+	--Very-light-gray: hsl(0, 0%, 98%);
+	--Dark-gray: hsl(0, 0%, 52%);
+}
+.App {
+	font-family: var(--FontNunito);
+}
+body {
+	background: var(--Very-light-gray);
+}
+
+.dark-mode {
+	background: var(--Bg-Dark);
+}
+
+.dark-mode .contenedorHeader {
+	background: var(--Dark-Blue);
+	color: var(--White);
+}
+.dark-mode .contenedorMain {
+	color: var(--White);
+}
+.dark-mode .formSearch {
+	background: var(--Dark-Blue);
+}
+.dark-mode .pais {
+	background: var(--Dark-Blue);
+	color: var(--White);
+	transition: background, color ease-in 300ms;
+}
+.dark-mode .loader {
+	color: var(--White);
+}
+.dark-mode .icon-light {
+	display: none;
+}
+.dark-mode .icon-dark {
+	display: block;
+}
+.dark-mode .formSearch input {
+	color: var(--White);
+}
+.dark-mode .select-disable {
+	background: var(--Dark-Blue);
+}
+.dark-mode .select-option {
+	background: var(--Dark-Blue);
+}
+.dark-mode .pais-borders span {
+	background: var(--Dark-Blue);
+}
+.dark-mode .pais-borders i {
+	background: var(--Dark-Blue);
+}
+.dark-mode .btn {
+	background: var(--Dark-Blue);
+}
+@media screen and (min-width: 640px) {
+	.contenedor {
+		padding: 20px 50px;
+	}
+	.contenedorPaises {
+		justify-content: inherit;
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	}
+}

@@ -1,0 +1,198 @@
+.contenedor {
+	padding: 20px 30px;
+	transition: background ease-in 300ms;
+}
+.contenedorHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: var(--Light-text);
+}
+.contenedorMain {
+	color: var(--Light-text);
+}
+.contenedorHeader h1 {
+	font-size: 1em;
+	letter-spacing: 0.5px;
+	font-weight: 600;
+	margin: 0;
+}
+.contenedorHeader .switch {
+	display: inline-flex;
+	gap: 10px;
+	align-items: center;
+	font-size: 14px;
+	cursor: pointer;
+	font-weight: 600;
+}
+.icon {
+	width: 15px;
+	height: 15px;
+}
+.icon-dark {
+	display: none;
+}
+.contenedorPaises {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 250px);
+	gap: 40px;
+	margin: 50px 0;
+	justify-content: center;
+	transition: background, color ease-in 300ms;
+}
+.pais {
+	border-radius: 10px;
+	overflow: hidden;
+	background: var(--White);
+	cursor: pointer;
+}
+.pais img {
+	vertical-align: middle;
+	width: 100%;
+	height: 190px;
+	object-fit: cover;
+}
+.pais-detalle {
+	padding: 40px 40px;
+}
+.pais-detalle h2 {
+	margin: 0;
+}
+.pais-detalle p {
+	letter-spacing: 0.5px;
+}
+.pais-detalle span {
+	opacity: 0.8;
+}
+.detalle {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 5px;
+}
+.detalle image {
+	margin: 1em 0;
+}
+.detalle h2 {
+	margin: 1em 0;
+}
+.pais-borders {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+.pais-borders span {
+	background: var(--White);
+	padding: 5px 15px;
+	cursor: pointer;
+}
+.pais-borders i {
+	background: var(--White);
+	padding: 5px 15px;
+	cursor: pointer;
+}
+.detalle {
+	padding: 0;
+}
+.detalle img {
+	width: 100%;
+}
+.detalle h3 {
+	font-weight: 400;
+}
+.btn {
+	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	color: currentColor;
+	background: var(--White);
+	padding: 7px 15px;
+	border-radius: 5px;
+	margin-bottom: 60px;
+	box-shadow: 0px 0px 5px #0004;
+}
+.contenedorMain {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+@media screen and (max-width: 340px) {
+	.contenedorHeader h1 {
+		font-size: 0.8em;
+	}
+	.contenedorHeader .switch {
+		font-size: 0.8em;
+	}
+	.contenedorPaises {
+		display: block;
+	}
+}
+@media screen and (min-width: 670px) {
+	.contenedor {
+		padding: 20px 45px;
+	}
+	.contenedorPaises {
+		grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+	}
+	.detalle {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		gap: 30px;
+	}
+	.detalle img {
+		min-width: 200px;
+		max-width: 100%;
+	}
+	.contenedor-info {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: min-content;
+	}
+	.contenedor-info div:first-child {
+		grid-column: span 2;
+	}
+	.contenedor-info div:last-child {
+		grid-column: span 2;
+	}
+	.contenedor-info h2 {
+		font-size: 2em;
+		margin: 0.3em 0;
+	}
+	.detalle h3 {
+		font-weight: 400;
+		font-size: 18px;
+	}
+}
+
+@media screen and (min-width: 1100px) {
+	.contenedor {
+		padding: 20px 80px;
+	}
+	.contenedorHeader {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	.contenedorHeader h1 {
+		font-size: 1.2em;
+	}
+	.contenedorMain {
+		padding-top: 50px;
+	}
+	.contenedorPaises {
+		grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+		gap: 50px;
+	}
+	.detalle img {
+		max-width: 500px;
+	}
+	.contenedor-info div:last-child {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+	.contenedor-info h2 {
+		margin: 0.5em 0;
+	}
+}
